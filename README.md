@@ -1,59 +1,35 @@
 # Objective: 
 
-Create a Java program that allows users to download web pages using multiple threads, handle exceptions, and save the web page content to files.
-
-Input: Allow the user to provide a list of URLs to download and specify the number of threads to use for downloading.
-
-Multithreading: Create and manage multiple threads, each responsible for downloading a specific file from the list of URLs.
-
-Download Progress: Display the download progress for each file, including the percentage of completion.
-
-Exception Handling: Implement proper error handling to deal with exceptions such as invalid URLs, network errors, or file access issues. Log any exceptions that occur.
-
-Save Files: Save the downloaded files to a specified directory on the local machine.
-
-
-# Features:
-
-input: Allow the user to input a list of URLs to download web pages from.
-
-Multithreading: Create multiple threads to concurrently download web pages from the list of URLs.
-
-Exception Handling: Implement proper error handling to deal with exceptions, such as network errors or invalid URLs.
-
-Save Web Pages: Save the downloaded web page content to individual text files.
-
-# Project Structure:
-
-Here's a simplified structure for the project:
-
-WebPageDownloader.java: The main class that manages the downloading process and user interaction.
-
-DownloadTask.java: A class representing a download task that can be executed by a thread.
-
-FileWriter.java: A utility class for saving web page content to text files.
-
-Main.java: The entry point of the application.
+To create a Java program that simulates an online shopping game where players can shop for virtual items, earn points, and make strategic decisions.
 
 # Guidelines
-1.User Input and Threads:
-Accept a list of URLs to download web pages from.//using arraylist
-provide the number of threads to use for downloading.
-Use ExecutorService to manage threads.
+1.Create a base class called VirtualItem with the following attributes and methods:
+Attributes:
+int itemID (unique identifier for each virtual item).
+String name (the name of the item).
+double price (the virtual price of the item).
+int points (the points that can be earned by purchasing the item).
 
-2.Download Task (DownloadTask):
-Create a DownloadTask class that implements the Callable interface.
-Each DownloadTask should download a web page content from a URL.
-Properly handle exceptions during download.
+Methods:
+Constructor to initialize the attributes.
+Getters and setters for each attribute.
+Override the toString() method to provide a formatted string representation of the virtual item.
 
-3.Web Page Download:
-Use the URL and URLConnection classes to download web page content.
-Store the content temporarily in a String or a StringBuilder.
+2.Create two subclasses: PowerUp and Decoration. Each subclass should inherit from the VirtualItem class and have additional attributes and methods:
 
-4.File Saving:
-Implement a FileWriter class to save web page content to text files.
-Derive a filename from the URL by extracting the last part (after the last /) and append ".txt" for the file extension.
+PowerUp should have attributes like effect (e.g., "double points" or "extra life") and appropriate methods.
+Decoration should have attributes like theme (e.g., "space" or "fantasy") and appropriate methods.
 
-5.Exception Handling:
-Catch and handle exceptions, such as network errors or invalid URLs.
+3.In the main class (let's call it ShoppingGame), create a list (ArrayList) to store virtual items, including power-ups and decorations. Populate the list with various items, each with different points and effects.
+
+4.Implement a game-like system where the player can:
+Start with a set number of points (e.g., 100 points).
+Shop for virtual items by choosing from a menu.
+Display the details of items in the shopping cart.
+Calculate and display the total points earned through purchased items.
+Make strategic decisions to maximize their points (e.g., buying power-ups to increase points).
+Apply a discount to the total price for purchasing multiple items.
+Track and display the remaining points.
+End the game when the player decides to quit or runs out of points.
+
 
