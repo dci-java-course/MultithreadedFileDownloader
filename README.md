@@ -1,6 +1,3 @@
-# Exercises for the module "Java Databases Basic Performance"
-
-
 # Objective: Create a Java program that allows users to download multiple files from the internet using multiple threads. The program should handle exceptions, show progress, and allow the user to specify the number of threads for downloading.
 
 Input: Allow the user to provide a list of URLs to download and specify the number of threads to use for downloading.
