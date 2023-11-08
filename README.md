@@ -13,7 +13,7 @@ Exception Handling: Implement proper error handling to deal with exceptions such
 Save Files: Save the downloaded files to a specified directory on the local machine.
 
 
-# Project Structure:
+# Features:
 
 input: Allow the user to input a list of URLs to download web pages from.
 
