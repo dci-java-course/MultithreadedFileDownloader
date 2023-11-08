@@ -34,3 +34,26 @@ DownloadTask.java: A class representing a download task that can be executed by 
 FileWriter.java: A utility class for saving web page content to text files.
 
 Main.java: The entry point of the application.
+
+# Guidelines
+## User Input and Threads:
+Accept a list of URLs to download web pages from.
+Prompt the user for the number of threads to use for downloading.
+Use ExecutorService to manage threads.
+Download Task (DownloadTask):
+
+Create a DownloadTask class that implements the Callable interface.
+Each DownloadTask should download a web page content from a URL.
+Properly handle exceptions during download.
+Web Page Download:
+
+Use the URL and URLConnection classes to download web page content.
+Store the content temporarily in a String or a StringBuilder.
+File Saving:
+
+Implement a FileWriter class to save web page content to text files.
+Derive a filename from the URL by extracting the last part (after the last /) and append ".txt" for the file extension.
+Exception Handling:
+
+Catch and handle exceptions, such as network errors or invalid URLs.
+Log exceptions to the console and continue with other downloads.
