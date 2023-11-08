@@ -11,3 +11,18 @@ Download Progress: Display the download progress for each file, including the pe
 Exception Handling: Implement proper error handling to deal with exceptions such as invalid URLs, network errors, or file access issues. Log any exceptions that occur.
 
 Save Files: Save the downloaded files to a specified directory on the local machine.
+
+
+# Project Structure:
+
+Here's an outline for the project structure:
+
+Downloader.java: The main class that manages the downloading process and user interaction.
+
+DownloadTask.java: A class representing a download task that can be executed by a thread.
+
+FileDownloader.java: A utility class for downloading files from URLs.
+
+ProgressMonitor.java: A class for monitoring and displaying download progress.
+
+Main.java: The entry point of the application.
